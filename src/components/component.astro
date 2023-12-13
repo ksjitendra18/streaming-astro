@@ -1,0 +1,6 @@
+---
+const res = await fetch(Astro.url.origin + "/api/hello");
+const resData = await res.json();
+---
+
+{resData?.data.map((d: any) => <div>{d.name}</div>)}
